@@ -3,6 +3,10 @@ import Categories from "./Categories";
 import Slider from "./Slider";
 import FlashSales from "./FlashSales";
 import Browse from "./Browse";
+import Banner from "./Banner";
+import ExploreOurProducts from "./ExploreOurProducts";
+import NewArrivals from "./NewArrivals";
+import Services from "../Common/Services";
 
 interface SliderDataItem {
   logo?: string;
@@ -45,12 +49,12 @@ function HomeComponents() {
           {sliderData ? <Slider data={sliderData} /> : <p>Loading slider...</p>}
         </div>
       </section>
-      <section>
-        <FlashSales />
-      </section>
-      <section>
-        <Browse/>
-      </section>
+      <FlashSales />
+      <Browse />
+      <Banner />
+      <ExploreOurProducts />
+      <NewArrivals />
+      <Services />
     </>
   );
 }
