@@ -11,6 +11,7 @@ import NotFound from "./notFoundPage";
 import Detail from "./productDetailPage";
 import SignUp from "./signUpPage";
 import Wishlist from "./wishlistPage";
+import AllProducts from "./allProducts";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "wishlist",
         element: <Wishlist />,
+      },
+      {
+        path: "all-products",
+        element: <AllProducts />,
       },
     ],
   },

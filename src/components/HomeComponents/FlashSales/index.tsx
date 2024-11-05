@@ -111,7 +111,7 @@ export default function FlashSales() {
 
   return (
     <section className="flex justify-center mt-40">
-      <div className="flex flex-col gap-2 p-2 md:px-[4rem] md:py-[2rem] lg:px-[6rem] lg:py-[3rem] sm:w-[100vw] md:w-[100vw] lg: xl:w-[200] 2xl:w-[150rem] ">
+      <div className="flex flex-col gap-2 p-2 md:px-[4rem] md:py-[2rem] lg:px-[6rem] lg:py-[3rem] sm:w-[100vw] md:w-[100vw] lg: xl:w-[200] 2xl:w-[150rem] border-b-[0.1rem]">
         <div className="flex justify-start items-center gap-3 mb-4">
           <span className="block w-[1.3rem] h-[3rem] rounded-md bg-[#DB4444]"></span>
           <h5 className="font-bold text-[#DB4444]">Today’s</h5>
@@ -125,21 +125,21 @@ export default function FlashSales() {
                 {timeLeft.days}
               </span>
             </p>
-            <span className="text-2xl font-bold text-action">:</span>
+            <span className="text-2xl font-bold text-[#DB4444]">:</span>
             <p className="flex flex-col items-center">
               Hours{" "}
               <span className="text-2xl max-sm:text-lg font-bold">
                 {timeLeft.hours}
               </span>
             </p>
-            <span className="text-2xl font-bold text-action">:</span>
+            <span className="text-2xl font-bold text-[#DB4444]">:</span>
             <p className="flex flex-col items-center">
               Minutes
               <span className="text-2xl max-sm:text-lg font-bold">
                 {timeLeft.minutes}
               </span>
             </p>
-            <span className="text-2xl font-bold text-action">:</span>
+            <span className="text-2xl font-bold text-[#DB4444]">:</span>
             <p className="flex flex-col items-center">
               Seconds
               <span className="text-2xl max-sm:text-lg font-bold">
@@ -148,10 +148,10 @@ export default function FlashSales() {
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <button className="bg-secondary w-8 h-8 rounded-full transition-all hover:bg-action hover:text-primary flex items-center justify-center">
+            <button className="bg-slate-50 w-8 h-8 rounded-full transition-all hover:bg-[#DB4444] hover:text-primary flex items-center justify-center">
               <HiArrowLeft />
             </button>
-            <button className="bg-secondary w-8 h-8 rounded-full transition-all hover:bg-action hover:text-primary flex items-center justify-center">
+            <button className="bg-slate-50 w-8 h-8 rounded-full transition-all hover:bg-[#DB4444] hover:text-primary flex items-center justify-center">
               <HiArrowRight />
             </button>
           </div>
@@ -166,19 +166,17 @@ export default function FlashSales() {
                   className="flex flex-col gap-1 w-[14rem] max-sm:w-[9rem]"
                   key={product.id}
                 >
-                  <div className="group flex flex-col items-center justify-center w-full h-[13rem] max-sm:h-[10rem] rounded-md p-4 bg-secondary relative transition-all overflow-hidden">
+                  <div className="group flex flex-col items-center justify-center w-full h-[13rem] max-sm:h-[10rem] rounded-md p-4 bg-slate-50 relative transition-all overflow-hidden">
                     <img
                       className="hover:scale-[1.2] transition-all"
                       src={product.img}
                       alt={product.alt}
                     />
-                    <span className="absolute w-max h-max px-2 rounded-md bg-accent left-3 top-2 text-sm text-primary">
-                      {product["discount-percentage"]}
+                    <span className="absolute w-max h-max px-2 rounded-md bg-[#DB4444] text-white left-3 top-2 text-sm text-primary">
+                      -{product["discount-percentage"]}
                     </span>
                     <div className="absolute top-2 right-3 flex flex-col gap-4">
-                      <button
-                        className="bg-white w-6 h-6 rounded-full flex items-center justify-center p-[1px]"
-                      >
+                      <button className="bg-white w-6 h-6 rounded-full flex items-center justify-center p-[1px]">
                         <HiOutlineHeart className="w-full h-full" />
                       </button>
                       <Link
@@ -188,15 +186,13 @@ export default function FlashSales() {
                         <HiOutlineEye className="w-full h-full" />
                       </Link>
                     </div>
-                    <button
-                      className="w-full h-[2rem] absolute bottom-0 bg-black text-white text-primary hidden max-lg:block group-hover:block"
-                    >
+                    <button className="w-full h-[2rem] absolute bottom-0 bg-black text-white text-primary hidden max-lg:block group-hover:block">
                       Add To Cart
                     </button>
                   </div>
                   <h3 className="text-md font-medium">{product.name}</h3>
                   <div className="flex gap-2 items-center">
-                    <span className="text-action">{`$${product["discount-price"]}`}</span>
+                    <span className="text-[#DB4444]">{`$${product["discount-price"]}`}</span>
                     <span className="line-through">{`$${product.price}`}</span>
                   </div>
                   <div>
@@ -213,7 +209,7 @@ export default function FlashSales() {
         </div>
         <div className="flex mt-8 items-center justify-center w-full">
           <Link
-            className="px-4 py-2 rounded-md bg-action w-max text-primary hover:translate-x-2 hover:-translate-y-1 transition-all"
+            className="px-4 py-2 rounded-md w-max text-white bg-[#DB4444] hover:translate-x-2 hover:-translate-y-1 transition-all"
             to="/all-products"
           >
             View All Products

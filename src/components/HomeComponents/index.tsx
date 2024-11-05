@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Categories from "./Categories";
 import Slider from "./Slider";
 import FlashSales from "./FlashSales";
+import Browse from "./Browse";
 
 interface SliderDataItem {
   logo?: string;
@@ -46,6 +47,9 @@ function HomeComponents() {
       </section>
       <section>
         <FlashSales />
+      </section>
+      <section>
+        <Browse/>
       </section>
     </>
   );

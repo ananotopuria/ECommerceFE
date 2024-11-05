@@ -2,31 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
-
 
 .swiper-pagination-bullet {
-    background-color: grey; 
-    opacity: 0.7;
-    width: 10px;
-    height: 10px;
-    transition: opacity 0.3s, background-color 0.3s;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: #DB4444; 
-    border: 2px solid white; 
-    opacity: 1;
-  }
+  background-color: grey;
+  opacity: 0.7;
+  width: 10px;
+  height: 10px;
+  transition: opacity 0.3s, background-color 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #db4444;
+  border: 2px solid white;
+  opacity: 1;
+}
+
+#category-p .category-icon {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7474%)
+    hue-rotate(154deg) brightness(101%) contrast(106%);
+}
+
+#category-p:hover .category-icon {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(64%) saturate(239%)
+    hue-rotate(280deg) brightness(119%) contrast(100%);
+}
