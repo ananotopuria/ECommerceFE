@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Categories from "./Categories";
 import Slider from "./Slider";
+import FlashSales from "./FlashSales";
 
 interface SliderDataItem {
   logo?: string;
@@ -36,16 +37,17 @@ function HomeComponents() {
   }, []);
 
   return (
-    <section className="flex sm:justify-between md:justify-center">
-      <div className="flex md:flex-row items-center justify-between gap-2 max-sm:gap-10 p-2 md:px-[4rem] lg:px-[6rem] sm:w-[100vw] md:w-[100vw] xl:w-[200] 2xl:w-[150rem] pt-0">
-        <Categories />
-        {sliderData ? (
-          <Slider data={sliderData} />
-        ) : (
-          <p>Loading slider...</p> 
-        )}
-      </div>
-    </section>
+    <>
+      <section className="flex sm:justify-between md:justify-center">
+        <div className="flex md:flex-row items-center justify-between gap-2 max-sm:gap-10 p-2 md:px-[4rem] lg:px-[6rem] sm:w-[100vw] md:w-[100vw] xl:w-[200] 2xl:w-[150rem] pt-0">
+          <Categories />
+          {sliderData ? <Slider data={sliderData} /> : <p>Loading slider...</p>}
+        </div>
+      </section>
+      <section>
+        <FlashSales />
+      </section>
+    </>
   );
 }
 

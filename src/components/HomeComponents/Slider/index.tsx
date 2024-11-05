@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
+import "swiper/css/pagination";
 
 interface SliderDataItem {
   logo?: string;
@@ -23,19 +25,20 @@ const Slider: React.FC<SliderProps> = ({ data }) => {
 
   return (
     <Swiper
+      modules={[Pagination]}
       spaceBetween={30}
       slidesPerView={1}
       loop={true}
       autoplay={{ delay: 10000 }}
       pagination={{ clickable: true }}
-      className="flex gap-2 w-full h-auto max-sm:h-[20rem] max-sm:w-[20rem]  bg-black text-white max-sm:justify-center max-sm:text"
+      className="flex gap-2 w-full h-auto max-sm:h-[20rem] max-sm:w-[20rem] bg-black text-white max-sm:justify-center"
     >
       {heroCarouselData.map((item, index) => (
         <SwiperSlide
           key={index}
           className="flex max-sm:flex-col max-sm:justify-center items-center md:flex-row gap-2"
         >
-          <div className="w-1/2 h-full text-primary flex flex-col text-center justify-center items-center gap-5 p-4">
+          <div className="w-1/2 h-full flex flex-col text-center justify-center items-center gap-5 p-4">
             <div className="flex flex-col lg:gap-10 items-center justify-center">
               {item.logo && (
                 <img
