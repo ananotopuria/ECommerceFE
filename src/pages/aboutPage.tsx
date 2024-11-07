@@ -1,6 +1,11 @@
+import AboutComponents from "../components/AboutComponents";
+
 function About() {
-    return <h1>About</h1>;
-  }
-  
-  export default About;
-  
+  return (
+    <>
+      <AboutComponents />
+    </>
+  );
+}
+
+export default About;

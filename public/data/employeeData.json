@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "Tom Cruise",
+      "image": "./../img/image46.png",
+      "role": "Founder & Chairman"
+    },
+    {
+      "id": 2,
+      "name": "Emma Watson",
+      "image": "./../img/image47.png",
+      "role": "Managing Director"
+    },
+    {
+      "id": 3,
+      "name": "Tom Hanks",
+      "image": "./../img/image51.png",
+      "role": "Product Designer"
+    },
+    {
+      "id": 4,
+      "name": "Leila Megan",
+      "image": "./../img/christina-wocintechchat-com-_5_CBVCLBsY-unsplash-removebg-preview.png",
+      "role": "Customer Support"
+    },
+    {
+      "id": 5,
+      "name": "Brenda Chris",
+      "image": "./../img/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash-removebg-preview.png",
+      "role": "UI/UX Designer"
+    },
+    {
+      "id": 6,
+      "name": "Cynthia Morgan",
+      "image": "./../img/christina-wocintechchat-com-SJvDxw0azqw-unsplash-removebg-preview.png",
+      "role": "Asst. Customer Support"
+    },
+    {
+      "id": 7,
+      "name": "Will Smith",
+      "image": "./../img/linkedin-sales-solutions-pAtA8xe_iVM-unsplash-removebg-preview.png",
+      "role": "Lead Software Engineer"
+    },
+    {
+      "id": 8,
+      "name": "Bruce Willis",
+      "image": "./../img/ryan-hoffman-Ft4p5E9HjTQ-unsplash-removebg-preview.png",
+      "role": "Full-Stack Developer"
+    }
+  ]
+  
