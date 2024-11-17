@@ -3,6 +3,7 @@ import StarRatings from "react-star-ratings";
 import { HiOutlineHeart, HiOutlineEye } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { ItemSkeleton2 } from "../components/HomeComponents/ExploreOurProducts";
+import { useCart } from "../hooks/useCart";
 
 type Product = {
   id: number;
@@ -18,6 +19,7 @@ type Product = {
 function AllProducts() {
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState<Product[]>([]);
+  const { addToCart } = useCart();
 
   async function getProducts() {
     try {
@@ -81,7 +83,16 @@ function AllProducts() {
                         <HiOutlineEye className="w-full h-full" />
                       </Link>
                     </div>
-                    <button className="w-full h-[2rem] absolute bottom-0 bg-black text-white hidden group-hover:block max-sm:block">
+                    <button
+                      className="w-full h-[2rem] absolute bottom-0 bg-black text-primary hidden group-hover:block max-sm:block"
+                      onClick={() =>
+                        addToCart({
+                          ...product,
+                          id: product.id.toString(),
+                          quantity: 1,
+                        })
+                      }
+                    >
                       Add To Cart
                     </button>
                   </div>
