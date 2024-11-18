@@ -4,6 +4,7 @@ import { HiOutlineHeart, HiOutlineEye } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { ItemSkeleton2 } from "../components/HomeComponents/ExploreOurProducts";
 import { useCart } from "../hooks/useCart";
+import { NavLink as RouterNavLink } from "react-router-dom";
 
 type Product = {
   id: number;
@@ -46,6 +47,17 @@ function AllProducts() {
   return (
     <section className="flex justify-center mt-20">
       <div className="flex flex-col gap-2 p-2 md:px-[4rem] md:py-[2rem] lg:px-[6rem] lg:py-[3rem] sm:w-[100vw] md:w-[100vw] lg: xl:w-[200] 2xl:w-[150rem] border-b-[0.1rem]">
+      <div className="mt-[2rem]  mb-[10rem]">
+          <RouterNavLink to="/" className="text-gray-500 no-underline mr-2">
+            Home
+          </RouterNavLink>
+          <span>
+            <b> / </b>
+          </span>
+          <RouterNavLink to="/all-products" className="text-black no-underline">
+            products
+          </RouterNavLink>
+        </div>
         <div className="flex items-center gap-3 mb-4">
           <span className="block w-[1.3rem] h-[3rem] rounded-md bg-[#DB4444]"></span>
           <h1 className="text-base text-[#DB4444] font-bold">Our Products</h1>
@@ -84,7 +96,7 @@ function AllProducts() {
                       </Link>
                     </div>
                     <button
-                      className="w-full h-[2rem] absolute bottom-0 bg-black text-primary hidden group-hover:block max-sm:block"
+                      className="w-full h-[2rem] absolute bottom-0 bg-black text-white hidden group-hover:block max-sm:block"
                       onClick={() =>
                         addToCart({
                           ...product,

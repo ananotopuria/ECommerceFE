@@ -19,7 +19,7 @@ function Navigation() {
             <Link to="about">About</Link>
           </li>
           <li>
-            <Link to="signup">Sign Up</Link>
+            <Link to="all-products">Products</Link>
           </li>
         </ul>
       </div>
